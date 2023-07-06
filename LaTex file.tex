@@ -1,0 +1,264 @@
+
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+
+\title{\huge \textbf{Resurrected Cat Paradox : Challenging the Von Neumann-Wigner Interpretation of Quantum Mechanics}}
+
+\author{Riddhiman Bhattacharya}
+
+\date{July 5, 2023}
+
+\begin{document}
+\maketitle
+\Large
+\begin{abstract}
+The Resurrected Cat Paradox 
+\end{abstract}
+
+\section{Introduction}
+\subsection{Fundamentals of Quantum Mechanics}
+
+\subsubsection{Wavefunction}
+In classical mechanics we can predict the position $x(t)$ and momentum $p(x,t)$ of a particle as a function of time(t) when given the initial conditions and the forces acting on the particle \cite{Griffiths2004Introduction}. However, in quantum mechanics that is not the case. Rather we attempt to find the wave function  $\psi(x,t)$ of the particle.
+
+To calculate this wave function we need to solve the Schr\"{o}dinger equation:
+\begin{equation}
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
+\frac{\partial^2 \Psi}{\partial x^2} + V \Psi
+\label{eq:1}
+\end{equation}
+
+This seemingly arbitrary function has an important physical significance, given by Born's statistical interpretation: $\int_a^b |\Psi(x,t)|^2 dx$ signifies the probability of finding a particle between \textit{a} and \textit{b} at a time \textit{t} given its wave function
+
+
+This means that quantum mechanics is indeterminate, that is, you cannot predict the outcome of any experiment, but you can gain statistical information about all the possible outcomes. However, we can say with certainty that the particle has to be somewhere  in space and time. Therefore, we can normalise the wave function (provided it is square integrable).
+
+\begin{equation}
+\int\limits_{-\infty}^\infty |\Psi(x,t)|^2 dx = 1
+\label{eq:2}
+\end{equation}
+
+This is useful for determining the magnitude of the complex multiplicative factor $A$ (note that we cannot determine the phase of $A$ by normalisation), as if $\psi\left(\mathbit{x},\mathbit{t}\right)$ is a solution to (1), so is $A\cdot{\psi}\left(\mathbit{x},\mathbit{t}\right)$. 
+
+
+%\begin{multline*}
+ % \small \displaystyle f:[a,b]\to \mathbb %{C} {\text{ square integrable on %}}[a,b]\quad \iff \quad\\
+  %\int _{a}^{b}|f(x)|^{2}\,\mathrm {d} %x<\infty 
+%\label{eq:4}  
+%\end{multline*}
+
+
+\begin{align}
+f:[a,b] &\to \mathbb{C} \text{ square integrable on } [a,b] \\
+\iff \quad &\int_{a}^{b} |f(x)|^{2} \, dx < \infty
+\end{align}
+
+
+An important consequence of the Schrödinger equation is that if a wave function is normalized at any time, the normalization remains preserved  \cite{Griffiths2004Introduction}.  If the normalization hadn't been preserved, then all wave functions would become non-normalizable (not physical states) and the whole theory would collapse as the Born's interpretation would be deemed incompatible with the Schr\"{o}dinger's equation.
+
+
+\subsubsection{What happens when you make a measurement?}
+
+Let us assume an arbitrary wave function of a particle (Figure 1), with probabilities of being at different points.
+
+
+%ADD MORE
+
+\begin{figure}
+\centering
+     \includegraphics[width=7.5cm,height=7.5cm,keepaspectratio]{Wavefunction before measurement.png}
+      \caption{An arbitrary wave function with different probabilities of finding the particle at different points}
+       \label{fig:Wavefn}
+\end{figure}
+
+\begin{figure}
+\centering
+     \includegraphics[width=7.5cm,height=7.5cm,keepaspectratio]{Wavefunction after collapse.png}
+      \caption{The collapse of the wave function into a delta function when the particle was found at B }
+       \label{fig:collapse}
+\end{figure}
+
+The figure in \ref{fig:collapse} represents the Dirac delta function
+
+\begin{equation}
+    \delta (x)={\begin{cases}+\infty ,&x=0\\0,&x\neq 0\end{cases}}
+    \label{eq:4}\\
+    \ \text{Where:} \int _{-\infty }^{\infty }\delta (x)\,dx=1.
+\end{equation}
+
+
+
+After the measurement, the wave function instantly spreads out, while obeying the Schr\"{o}dinger equation but with different initial conditions, so the wave function gets modified.
+
+Now, the question arises, when we measured the particle to be at B at some time $t_0$ where is B \textit{just before} the measurement?
+
+There are three different positions scientists take on this question:
+\begin{enumerate}
+\item The realist position: The realist believes that the particle was at C and quantum mechanics could not predict it, making it an ”incomplete theory” that needs a hidden variable along with the wave function for it to be rendered complete. They believed that nothing is indeterminate, and that indeterminacy is just a reflection of our ignorance. 
+\item The orthodox position: The particle was not anywhere. You only know where the particle is when you make a measurement, otherwise, its position is indeterminate, and it can be anywhere. We compel the particle to attain a definite position by measuring it. 
+\item The agnostic position: The agonist believes that the in-determinacy problem is indeterminable. Because you must make a measurement to know the state of a system, you cannot know the state of a system between measurements. 
+\end{enumerate}
+Interestingly Albert Einstein was a realist, as he believed quantum mechanics defied causality.
+
+All these positions were popular among scientists until Bell's theorem was postulated.
+
+
+This "indeterminacy" of Quantum mechanics leads to a fundamental quantum mechanical principle.
+
+
+\subsection{Von Neumann–Wigner Interpretation}
+
+\section{Double Slit Experiment}
+Thomas Young first conducted the Double-Slit Experiment in 1801 to display the wave-like behavior of light. In
+the experiment, light is sent through two slits into a screen,
+and an interference pattern emerges, which is the expected
+result for objects displaying wave-like behavior. Later, other
+variations of the experiment were conducted with beams of
+electrons instead of light.
+
+\begin{figure}[h]
+\centering
+     \includegraphics[width=7.5cm,height=7.5cm,keepaspectratio]{Double Slit.jpeg}
+      \caption{Double Slit Experiment}
+       \label{fig:DSE}
+\end{figure}
+
+In the modern Double-Slit Experiment, electrons are shot
+to a screen through two slits. These electrons are expected
+to behave like particles and create a clumped pattern on the
+net. However, these electrons generate an interference pattern displaying wave-like behavior. Physicists thought that
+these electrons must be interfering with each other. Despite
+that, when the electrons are shot one by one, the interference
+pattern is created again, showing that the electrons are interfering with themselves and not with other electrons. The
+electrons pass through both slits simultaneously and show
+wave-like behavior when shot. The electrons are not particles
+or waves before measurement but rather wave functions.¹⁵ A
+simple Double- Slit Experiment setup is given in Figure 1.
+Since the electrons are in a superposition of two states, the
+state of electrons that have been shot can be represented
+
+
+\begin{equation}
+    |\Psi\rangle=\frac{1}{\sqrt{2}}|right slit\rangle+ \frac{1}{\sqrt{2}}|left slit\rangle
+\end{equation}
+
+
+
+\subsection{Observer Effects in Double Slit Experiment}
+
+When a measuring device is put before the slits identifying which slit each electron is passing through (gathering the
+“which-path” information), the interference pattern disappears, and a clumped pattern emerges. This means that the
+electrons display particle-like behavior when a measurement
+device is present. The act of measurement changes the outcome of the experiment.
+When the measurement is made, the wave function collapses, and the electrons behave as particles. In fact, the wave
+function collapses if the “which-path” information is known.
+This is a key point for the following sections. A setup for
+the Double-Slit Experiment with observer effects is given in
+Figure 2.
+
+Since measurement has been made and the wave functions
+of the electrons have collapsed, the state of electrons can be
+represented as:
+
+\begin{equation}
+    |\Psi\rangle=\frac{1}{1}|right slit\rangle+ \frac{0}{1}|left slit\rangle
+\end{equation}
+
+\begin{equation}
+    |\Psi\rangle=\frac{0}{1}|right slit\rangle+ \frac{1}{1}|left slit\rangle
+\end{equation}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5cm,height=7cm,keepaspectratio]{Observer Effects in Double Slit Experiment.jpeg}
+    \caption{Caption}
+    \label{Setup for Observer Effects }
+\end{figure}
+
+
+
+
+
+\section{Delayed Choice experiment}
+
+If the detectors in the \ref{Setup for Observer Effects } are behind the slits, it causes the me
+
+\begin{figure}
+\centering[h]
+     \includegraphics[width=10cm,height=7cm,keepaspectratio]{CASE-1,RCP.jpeg}
+      \caption{Case-I}
+       \label{fig:Wavefn}
+\end{figure}
+
+\Large 
+FHXJG
+BHVKHV
+
+
+
+\begin{figure}
+\centering[h]
+     \includegraphics[width=10cm,height=7cm,keepaspectratio]{Case-2, RCP.jpeg}
+      \caption{Case-II}
+       \label{fig:Wavefn}
+\end{figure}
+
+
+\textbf{Schrödinger}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If the dead cat is taken out of the box after being observed
+by observer II and later observer I makes an observation, either we should end up with two cats, one dead and one alive,
+which is against the fundamental laws of physics, or observer
+I's observation would not be able to change the past which
+is against the premises of the experiment. Furthermore, the
+more fundamental assumptions of the experiment, like the
+observed past being altered and the cat returning to life after death, are not possible. Despite this, according to the Von
+Neumann-Wigner Interpretation, the experiment itself is
+not flawed. Thus, the Von Neumann-Wigner Interpretation
+and the idea that consciousness causes wave function collapse
+must be flawed.
+
+\section{Conclusion}
+
+\section{Acknowledgment}
+I extend my heartfelt gratitude to Ananya Mondal for her tremendous commitment and careful work in drawing all the diagrams used in the paper. The diagrams are an integral part of the paper that significantly improved the readability and comprehension of our work. She spent a lot of time refining them, and I'm very appreciative of that.
+
+
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
